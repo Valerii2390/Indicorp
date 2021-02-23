@@ -1,0 +1,143 @@
+@import '_vars';
+@import '_global';
+@import '_fonts';
+.header {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 36px;
+    padding-bottom: 20px;
+}
+
+.header__list {
+    margin-right: 116px;
+}
+
+.header__list li {
+    display: inline-block;
+    &+li {
+        margin-left: 20px;
+    }
+}
+
+.header__btn {
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    position: relative;
+    &::before {
+        content: '';
+        width: 20px;
+        height: 2px;
+        position: absolute;
+        background-color: #252B42;
+        left: 1px;
+        top: -3px;
+    }
+    &::after {
+        content: '';
+        width: 10px;
+        height: 2px;
+        position: absolute;
+        background-color: #252B42;
+        right: 6px;
+        top: 5px;
+    }
+}
+
+.header__btn-line {
+    width: 15px;
+    height: 2px;
+    background-color: $tex;
+}
+
+.hero__title {
+    font-size: 58px;
+    color: $tex;
+    @include f800;
+    max-width: 550px;
+    line-height: 70px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    letter-spacing: 0.2px;
+}
+
+.hero__text {
+    max-width: 242px;
+    font-style: normal;
+    margin-bottom: 35px;
+}
+
+.hero__btns {
+    line-height: 28px;
+    @include f700;
+    margin-bottom: 60px;
+}
+
+.hero__quote {
+    background-color: $yel;
+    border-radius: 37px;
+    padding: 10px 36px;
+    margin-left: 10px;
+    border: none;
+    color: #fff;
+}
+
+.hero__learn {
+    background-color: transparent;
+    border-radius: 37px;
+    padding: 10px 36px;
+    border: 1px solid $blu;
+    color: $blu;
+}
+
+.hero__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero__item {
+    max-width: 330px;
+    background-color: #fff;
+    padding: 40px 40px 35px 40px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    &.active {
+        background-color: $blu;
+        color: #fff;
+    }
+}
+
+.hero__content-title {
+    font-size: 24px;
+    line-height: 32px;
+    @include f700;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.hero__content-text {
+    max-width: 213px;
+    width: 100%;
+}
+
+.choose__inner {
+    background-color: #FAFAFA;
+    margin-top: 192px;
+    text-align: center;
+}
+
+.choose__text {
+    max-width: 511px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+@import '_media';
